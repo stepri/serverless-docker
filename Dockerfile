@@ -18,6 +18,6 @@ RUN npm i -g serverless@1.63.0
 COPY . /project
 WORKDIR /project
 
-RUN sls deploy --stage $STAGE
-RUN sls plugin install -n serverless-prune-plugin
-RUN sls prune -n $PRUNE_N
+CMD sls deploy --stage $STAGE
+CMD sls plugin install -n serverless-prune-plugin
+CMD sls prune -n $PRUNE_N
