@@ -12,8 +12,12 @@ LABEL "com.github.actions.color"="red"
 
 ENV STAGE testing
 ENV PRUNE_N 4
+ENV PATH
 
 RUN npm i -g serverless@1.63.0
 RUN npm i --save-dev serverless-prune-plugin@1.4.1
+
+ADD $PATH /project
+WORKDIR /project
 
 ENTRYPOINT ["serverless"]
