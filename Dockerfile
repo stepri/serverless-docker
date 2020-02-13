@@ -20,5 +20,5 @@ COPY . /project
 WORKDIR /project
 
 CMD sls deploy --stage $STAGE
-CMD sls plugin install -n serverless-prune-plugin
-CMD sls prune -n $PRUNE_N
+# CMD sls plugin install -n serverless-prune-plugin
+# CMD sls prune -n $PRUNE_N
