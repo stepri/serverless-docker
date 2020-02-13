@@ -11,6 +11,7 @@ LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="red"
 
 RUN npm i -g serverless@1.63.0
-RUN npm i -g serverless-prune-plugin
+RUN sls plugin install -n serverless-prune-plugin
+RUN sls prune -n 4
 
 ENTRYPOINT ["serverless"]
