@@ -14,6 +14,9 @@ ENV STAGE testing
 ENV PRUNE_N 4
 
 RUN npm i -g serverless@1.63.0
+
+ADD .
+
 RUN sls deploy --stage $STAGE
 RUN sls plugin install -n serverless-prune-plugin
 RUN sls prune -n $PRUNE_N
