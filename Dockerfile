@@ -1,7 +1,7 @@
 FROM node:12-slim
 
 LABEL version="1.0.0"
-LABEL repository="https://github.com/stepri/serverless"
+LABEL repository="https://github.com/stepri/serverless-docker"
 LABEL homepage="https://github.com/stepri/serverless-docker"
 LABEL maintainer="Steven Prins"
 
