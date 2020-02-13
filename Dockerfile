@@ -10,10 +10,6 @@ LABEL "com.github.actions.description"="Serverless framework with serverless-pru
 LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="red"
 
-ENV STAGE testing
-ENV PRUNE_N 4
-ENV PATH
-
 RUN npm i -g serverless@1.63.0
 RUN npm i --save-dev serverless-prune-plugin@1.4.1
 
